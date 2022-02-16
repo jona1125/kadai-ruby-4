@@ -43,8 +43,14 @@
         <h1 class="mt-4 pb-4 border-bottom">送信完了</h1>
         <p>ありがとうございました。送信を受け付けました。</p>
         <p>3営業日以内をめどにご返信いたしますので、しばらくお待ちください。</p>
-        <h3 class="mt-4 pb-4">返信内容</h3>
-        <table class="mt-4 table table-border-bottom">
+       
+        <h1 class="mt-4 pb-4 border-bottom">送信内容</h1>
+        <% company = params['company'] %>
+        <% name = params['name'] %>
+        <% mail = params['mail'] %>
+        <% tel = params['tel'] %>
+        <% content = params['content'] %>
+            <table class="table">
             <tr>
                 <td>会社名</td>
                 <td><%= company %></td>
@@ -67,6 +73,7 @@
             </tr>
         </table>
         <div class="text-center mb-4">
+            
             <!-- 「戻る」ボタンを緑色にする設定を追加 -->
             <a href="contact.html" class="btn btn-success">戻る</a>
         </div>
